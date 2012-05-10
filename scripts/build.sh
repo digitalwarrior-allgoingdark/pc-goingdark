@@ -1,6 +1,6 @@
 #!/bin/bash
 
 sudo $WORKSPACE/scripts/prepare_isobuilder.sh
-mkdir $WORKSPACE/remaster-iso
-sudo /usr/bin/uck-remaster -m lubuntu-12.04-desktop-i386.iso $WORKSPACE/scripts/uck_scripts $WORKSPACE
+mkdir $WORKSPACE/isoworking
+sudo /usr/bin/uck-remaster -m lubuntu-12.04-desktop-i386.iso $WORKSPACE/scripts/uck_scripts $WORKSPACE/isoworking
 
