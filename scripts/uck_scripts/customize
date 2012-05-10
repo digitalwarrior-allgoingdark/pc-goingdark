@@ -1,0 +1,36 @@
+
+######################################################################
+###Variables (recommended to only alter variables
+######################################################################
+#Add these packages to the Distro, seperate packagenames with spaces
+ADD_PACKAGE_LIST="firefox vim git"
+
+#Remove these packages from the Distro, seperate packagenames with spaces
+REMOVE_PACKAGE_LIST="chromium"
+
+
+######################################################################
+###Functions
+######################################################################
+function add_packages () {
+   for PACKAGE_NAME in $ADD_PACKAGE_LIST; do
+      apt-get -y install $PACKAGE_NAME 
+   done
+}
+
+function remove_packages () {
+   for PACKAGE_NAME in $REMOVE_PACKAGE_LIST; do
+      apt-get -y install $PACKAGE_NAME 
+   done
+}
+
+
+######################################################################
+###Program
+######################################################################
+
+apt-get update
+add_packages
+remove_packages
+
+
